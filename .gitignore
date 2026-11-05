@@ -1,0 +1,16 @@
+# Environment and Secrets
+.env
+.env.local
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*.class
+
+# Local Runtime State & Data
+trader/data/*.json
+trader/state/*.json
+
+# OS Metadata
+.DS_Store
+Thumbs.db

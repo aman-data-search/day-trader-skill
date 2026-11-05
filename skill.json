@@ -1,0 +1,24 @@
+{
+  "name": "us100-m5-analyzer",
+  "version": "1.0.0",
+  "description": "Intraday M5 Opening Range Breakout (ORB) analyzer for US100 with Monte Carlo verification.",
+  "entrypoint": "run_analysis.py",
+  "commands": [
+    {
+      "name": "sync-cache",
+      "description": "Downloads and updates 60 days of RTH M5 historical bars from Alpaca IEX.",
+      "exec": "python run_analysis.py --cache",
+      "schedule": "15 9 * * 1-5"
+    },
+    {
+      "name": "scan-orb",
+      "description": "Scans completed M5 candles for ORB breakout, generates targets and Monte Carlo audit.",
+      "exec": "python run_analysis.py --scan",
+      "schedule": "50,55 9,10,11 * * 1-5"
+    }
+  ],
+  "environment_variables": [
+    "ALPACA_API_KEY",
+    "ALPACA_SECRET_KEY"
+  ]
+}

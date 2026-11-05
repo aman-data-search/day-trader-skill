@@ -1,0 +1,25 @@
+{
+  "symbol": {
+    "proxy": "QQQ",
+    "display_name": "US100 / NAS100"
+  },
+  "strategy": {
+    "timeframe": "5Min",
+    "orb_candle_count": 3,
+    "r_multiple": 1.5,
+    "session_start_et": "09:30",
+    "orb_end_et": "09:45",
+    "session_end_et": "16:00",
+    "hard_flat_et": "15:55"
+  },
+  "historical_data": {
+    "lookback_days": 60,
+    "feed": "iex",
+    "cache_path": "trader/data/history_m5.json"
+  },
+  "simulation": {
+    "monte_carlo_iterations": 10000,
+    "forward_bars": 30,
+    "min_win_prob_pct": 42.0
+  }
+}
